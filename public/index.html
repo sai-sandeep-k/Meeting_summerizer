@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Summarizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Meeting Summarizer</h1>
+    <p>Upload your meeting audio (MP3, WAV, M4A, etc.) to get a transcript and a summary.</p>
+
+    <div class="card">
+      <input type="file" id="audio-upload" accept="audio/*">
+      <button id="summarize-btn">Summarize</button>
+    </div>
+
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Processing... This may take a moment.</p>
+    </div>
+
+    <div id="results" class="hidden">
+      <div class="result-box">
+        <h2>Summary</h2>
+        <div id="summary-output"></div>
+      </div>
+
+      <div class="result-box">
+        <h2>Full Transcript</h2>
+        <pre id="transcript-output"></pre>
+      </div>
+    </div>
+
+    <div id="error" class="hidden">
+      <p id="error-message"></p>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
